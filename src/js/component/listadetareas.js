@@ -8,18 +8,17 @@ const Listadetareas = ({todos, setTodos, }) => {
         setTodos(todos.filter((todo) => todo.id !==id))
     }
     return (
-        <div>
+        <div >
             {todos.map((todo)=>(
-             <li className="list-item" key={todo.id}>
+             <li className="list-item"  key={todo.id}>
                 <input 
                 type="text" 
                 value={todo.title}
                  className="list" 
                  onChange={(event) => event.preventDefault()}/>
-             <div>
-                
-                <button className="button-deleted task-button" onClick={()=>handleDeleted(todo)}><i class="fa fa-trash-alt"></i></button>
-             </div>
+            
+                <button className="button-deleted" onClick={()=>handleDeleted(todo)}><i className="fa fa-trash-alt"></i></button>
+             
              </li>
             
             ))}
